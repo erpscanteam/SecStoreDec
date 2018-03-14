@@ -4,7 +4,7 @@ You need "pyjks" package to use this script.
 `pip install pyjks`
 
 This program decrypts SAP SecStore.key and SecStore.properties files, encrypted data from "J2EE_CONFIGENTRY" table.
-SecStoreDec.py can work in 2 modes: dss - Decrypt SecStored and dd - Decrypt Data
+SecStoreDec.py can work in 2 modes: *dss - Decrypt SecStore* and *dd - Decrypt Data*
 The first mode you can use to decrypt SecStore.key and SecStore.properties files. Example:
 
 If SecStore.key and SecStore.properties files are located in the same directory, then :
