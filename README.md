@@ -1,22 +1,48 @@
-Requirements:
-You need "pyjks" package to use this script.
+# Requirements
 
-`pip install pyjks`
+You need `pyjks` package to use this script.
 
-This program decrypts SAP SecStore.key and SecStore.properties files, encrypted data from "J2EE_CONFIGENTRY" table.
-SecStoreDec.py can work in 2 modes: *dss - Decrypt SecStore* and *dd - Decrypt Data*
-The first mode you can use to decrypt SecStore.key and SecStore.properties files. Example:
+```
+pip install pyjks
+```
 
-If SecStore.key and SecStore.properties files are located in the same directory, then :
+# Usage
+
+This program decrypts SAP `SecStore.key` and `SecStore.properties`
+files and encrypted data from the `J2EE_CONFIGENTRY` table.
+
+`SecStoreDec.py` can work in two modes:
+- `dss`: Decrypt SecStore (used to decypt `SecStore.properties` with
+  `SecStore.key`)
+- `dd`: Decrypt raw data
+
+## SecStore decryption
+
+If `SecStore.key` and `SecStore.properties` files are located in the
+same directory you can omit them as arguments:
+
 ```
-    python SecStoreDec.py dss
+python SecStoreDec.py dss
 ```
-Else you can set any path you like:
+
+else you can set any path you like:
+
 ```
-    python SecStoreDec.py dss ../SecStore.properties ../SecStore.key
+python SecStoreDec.py dss ../SecStore.properties ../SecStore.key
 ```
-The second mode is used to decrypt encrypted data in J2EE_CONFIGENTRY. You need key-phrase and encrypted data in hex-format. Example:
+
+## Raw data decryption
+
+The second mode is used to decrypt encrypted data in
+`J2EE_CONFIGENTRY`. You need the keyphrase and the encrypted data in
+hex format. Example:
+
 ```
-    python SecStoreDec.py dd -k MYKEYPHRASE -d 01011c...
+python SecStoreDec.py dd -k MYKEYPHRASE -d 01011c...
 ```
-Special thanks to @gelim and @_chipik
+
+NB: The keyphrase is obtained via decryption of the
+`SecStore.properties` file
+
+
+Special thanks to [@gelim](https://twiter.com/gelim) and [@_chipik](https://twiter.com/_chipik)
