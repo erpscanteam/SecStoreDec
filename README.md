@@ -45,4 +45,4 @@ NB: The keyphrase is obtained via decryption of the
 `SecStore.properties` file
 
 
-Special thanks to [@gelim](https://twiter.com/gelim) and [@_chipik](https://twiter.com/_chipik)
+Special thanks to [@gelim](https://twitter.com/gelim) and [@_chipik](https://twitter.com/_chipik)
