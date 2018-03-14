@@ -19,3 +19,4 @@ The second mode is used to decrypt encrypted data in J2EE_CONFIGENTRY. You need 
 ```
     python SecStoreDec.py dd -k MYKEYPHRASE -d 01011c...
 ```
+Special thanks to @gelim and @_chipik
